@@ -38,14 +38,13 @@ nav {
   background: linear-gradient(var(--opacity), transparent);
   position: fixed;
   top: 0;
-  height: 50px;
   width: 100vw;
   text-align: center;
 }
 
 nav ul {
-  display: inline-block;
   padding: 0;
+  margin: 0;
 }
 
 nav li {
@@ -53,6 +52,9 @@ nav li {
 }
 
 nav a {
+  margin: 0;
+  padding: 0;
+  display: inline-block;
   background-color: var(--background);
   padding: 10px;
   text-decoration: none;
@@ -141,23 +143,50 @@ main img {
   height: 200px;
 }
 
-/* FOOTER */
-footer {
-  display: flex;
-  align-items: center;
-  padding: 50px;
+/* MEMBERS PAGE */
+.members {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 20px;
+}
+.members section {
+  text-align: justify;
 }
 
-footer.bottom {
-  width: calc(100% - 100px);
-  position: absolute;
+.members img {
+  width: 100%;
+  height: unset;
+}
+
+/* GALLERY PAGE */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(14, 50vh);
+  grid-gap: 20px;
+}
+
+.gallery img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* FOOTER */
+footer {
+  background: linear-gradient(transparent, var(--background));
+  width: 100%;
+  position: fixed;
   bottom: 0;
+  height: 100px;
 }
 
 footer .socials {
-  width: 50%;
   margin: 0;
   padding: 0;
+  position: absolute;
+  left: 50px;
+  bottom: 50px;
 }
 
 footer .socials li {
@@ -171,8 +200,9 @@ footer .socials a {
 }
 
 footer .copyright {
-  width: 50%;
-  text-align: right;
+  position: absolute;
+  right: 50px;
+  bottom: 50px;
   font-size: 1.2em;
   color: var(--foreground);
   text-decoration: none;
