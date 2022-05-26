@@ -1,9 +1,44 @@
-body {
+/* VARIABLES */
+:root {
+  --background: #000;
+  --foreground: #fff;
+  --opacity: #00000080;
+  --accent: #ff0000;
+}
+
+/* FONT */
+h1 {
+  color: var(--accent);
+  font-size: 3em;
+  margin: 0;
+}
+h2 {
+  font-size: 2em;
+  margin: 0;
+}
+h3 {
+  font-size: 1.5em;
+  margin: 0;
+}
+p {
+  font-size: 1.2em;
   margin: 0;
 }
 
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  margin: 0;
+  font-family: sans-serif;
+}
+
+/* NAVIGATION */
 nav {
-  position: absolute;
+  box-sizing: border-box;
+  background: linear-gradient(var(--opacity), transparent);
+  position: fixed;
+  top: 0;
+  height: 50px;
   width: 100vw;
   text-align: center;
 }
@@ -18,7 +53,68 @@ nav li {
 }
 
 nav a {
-  border: 1px solid red;
+  background-color: var(--background);
+  padding: 10px;
   text-decoration: none;
-  color: #000;
+  color: var(--foreground);
+}
+
+/* LANDING */
+.landing {
+  background: linear-gradient(transparent, var(--background)),
+    url(assets/img/background.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 80vh;
+  padding: 100px;
+}
+.landing div {
+  width: 50%;
+  margin-right: 50px;
+}
+
+.landing img {
+  height: 400px;
+}
+
+/* MAIN */
+main {
+  padding: 50px;
+}
+
+/* FOOTER */
+footer {
+  display: flex;
+  align-items: center;
+  padding: 50px;
+}
+
+footer .socials {
+  width: 50%;
+  margin: 0;
+  padding: 0;
+}
+
+footer .socials li {
+  display: inline-block;
+}
+
+footer .socials a {
+  color: var(--foreground);
+  margin-right: 20px;
+  font-size: 1.2em;
+}
+
+footer .copyright {
+  width: 50%;
+  text-align: right;
+  font-size: 1.2em;
+  color: var(--foreground);
+  text-decoration: none;
 }
