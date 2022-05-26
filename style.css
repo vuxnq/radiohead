@@ -57,11 +57,12 @@ nav a {
   padding: 10px;
   text-decoration: none;
   color: var(--foreground);
+  font-size: 1.2em;
 }
 
 /* LANDING */
 .landing {
-  background: linear-gradient(transparent, var(--background)),
+  background: linear-gradient(var(--opacity), var(--background)),
     url(assets/img/background.png);
   background-size: cover;
   background-position: center;
@@ -86,6 +87,29 @@ nav a {
 /* MAIN */
 main {
   padding: 50px;
+}
+
+main .grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 20px;
+}
+
+main article {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: justify;
+}
+
+main .img {
+  text-align: center;
+}
+
+main img {
+  height: 300px;
 }
 
 /* FOOTER */
