@@ -60,6 +60,16 @@ nav a {
   font-size: 1.2em;
 }
 
+nav a:hover {
+  background-color: var(--accent);
+  color: var(--background);
+}
+
+nav a.checked {
+  background-color: var(--foreground);
+  color: var(--background);
+}
+
 /* LANDING */
 .landing {
   background: linear-gradient(var(--opacity), var(--background)),
@@ -112,11 +122,36 @@ main img {
   height: 300px;
 }
 
+/* ALBUMS PAGE */
+.albums div {
+  display: none;
+  text-align: justify;
+  padding: 20px;
+}
+
+.albums h2:hover ~ div {
+  display: flex;
+}
+
+.albums article {
+  display: block;
+}
+
+.albums img {
+  height: 200px;
+}
+
 /* FOOTER */
 footer {
   display: flex;
   align-items: center;
   padding: 50px;
+}
+
+footer.bottom {
+  width: calc(100% - 100px);
+  position: absolute;
+  bottom: 0;
 }
 
 footer .socials {
