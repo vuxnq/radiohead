@@ -75,7 +75,7 @@ nav a.checked {
 /* LANDING */
 .landing {
   background: linear-gradient(var(--opacity), var(--background)),
-    url(assets/img/background.png);
+    url(assets/img/background.webp);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
