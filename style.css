@@ -7,29 +7,48 @@
 }
 
 /* FONT */
+@font-face {
+  font-family: Montserrat900;
+  src: url(assets/fonts/Montserrat-ExtraBold.ttf);
+}
+@font-face {
+  font-family: Montserrat700;
+  src: url(assets/fonts/Montserrat-Bold.ttf);
+}
+@font-face {
+  font-family: Montserrat500;
+  src: url(assets/fonts/Montserrat-Medium.ttf);
+}
+
 h1 {
   color: var(--accent);
   font-size: 3em;
   margin: 0;
+  font-family: Montserrat900, sans-serif;
 }
 h2 {
   font-size: 2em;
   margin: 0;
+  font-family: Montserrat700, sans-serif;
 }
 h3 {
   font-size: 1.5em;
   margin: 0;
+  font-family: Montserrat700, sans-serif;
 }
 p {
   font-size: 1.2em;
   margin: 0;
+}
+strong {
+  font-family: Montserrat700, sans-serif;
 }
 
 body {
   background-color: var(--background);
   color: var(--foreground);
   margin: 0;
-  font-family: sans-serif;
+  font-family: Montserrat500, sans-serif;
 }
 
 /* NAVIGATION */
@@ -39,12 +58,13 @@ nav {
   position: fixed;
   top: 0;
   width: 100vw;
-  text-align: center;
 }
 
 nav ul {
+  display: flex;
+  justify-content: center;
   padding: 0;
-  margin: 0;
+  margin: 10px;
 }
 
 nav li {
@@ -120,7 +140,11 @@ main .img {
   text-align: center;
 }
 
-main img {
+/* HOME PAGE */
+.home h2 {
+  margin-bottom: 20px;
+}
+.home img {
   height: 300px;
 }
 
@@ -206,4 +230,8 @@ footer .copyright {
   font-size: 1.2em;
   color: var(--foreground);
   text-decoration: none;
+}
+
+footer a:hover {
+  color: var(--accent);
 }
