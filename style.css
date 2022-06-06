@@ -6,6 +6,18 @@
   --accent: #ff0000;
 }
 
+/* ANIMATIONS */
+@keyframes album-slidein {
+  from {
+    opacity: 0;
+    transform: translateX(-5%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+}
+
 /* FONT */
 @font-face {
   font-family: Montserrat900;
@@ -73,7 +85,6 @@ nav li {
 
 nav a {
   margin: 0;
-  padding: 0;
   display: inline-block;
   background-color: var(--background);
   padding: 10px;
@@ -153,6 +164,7 @@ main .img {
   display: none;
   text-align: justify;
   padding: 20px;
+  animation: album-slidein 0.2s;
 }
 
 .albums h2:hover ~ div {
@@ -194,6 +206,45 @@ main .img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+/* CONTACT PAGE */
+.contact {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 80vh;
+}
+
+.contact h2 {
+  margin-bottom: 10px;
+}
+
+.contact textarea,
+.contact input[type="email"] {
+  background-color: var(--foreground);
+  box-sizing: border-box;
+  margin-bottom: 10px;
+  display: block;
+  width: 100%;
+  padding: 10px;
+  resize: none;
+  border: none;
+  font-size: 1.2em;
+}
+
+.contact input[type="submit"] {
+  background-color: var(--foreground);
+  color: var(--background);
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: none;
+  text-decoration: none;
+  font-size: 1.2em;
+}
+.contact input[type="submit"]:hover {
+  background-color: var(--accent);
 }
 
 /* FOOTER */
