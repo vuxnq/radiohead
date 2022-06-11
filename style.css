@@ -97,6 +97,10 @@ nav a:hover {
   background-color: var(--accent);
   color: var(--background);
 }
+nav a:active {
+  background-color: var(--background);
+  color: var(--accent);
+}
 
 nav a.checked {
   background-color: var(--foreground);
@@ -167,6 +171,10 @@ main .img {
   animation: album-slidein 0.2s;
 }
 
+.albums h2 {
+  padding-block: 5px;
+}
+
 .albums h2:hover ~ div {
   display: flex;
 }
@@ -190,8 +198,13 @@ main .img {
 }
 
 .members img {
+  transition: 0.2s;
   width: 100%;
   height: unset;
+}
+
+.members section:hover img {
+  border-radius: 50%;
 }
 
 /* GALLERY PAGE */
@@ -203,9 +216,16 @@ main .img {
 }
 
 .gallery img {
+  box-sizing: border-box;
+  transition: 0.2s;
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+.gallery img:hover {
+  padding: 5%;
+  object-fit: contain;
 }
 
 /* CONTACT PAGE */
@@ -230,6 +250,7 @@ main .img {
   padding: 10px;
   resize: none;
   border: none;
+  font-family: Montserrat500, sans-serif;
   font-size: 1.2em;
 }
 
@@ -246,7 +267,10 @@ main .img {
 .contact input[type="submit"]:hover {
   background-color: var(--accent);
 }
-
+.contact input[type="submit"]:active {
+  background-color: var(--background);
+  color: var(--accent);
+}
 /* FOOTER */
 footer {
   background: linear-gradient(transparent, var(--background));
@@ -269,9 +293,18 @@ footer .socials li {
 }
 
 footer .socials a {
+  display: inline-block;
   color: var(--foreground);
   margin-right: 20px;
   font-size: 1.2em;
+}
+
+footer .socials a:hover {
+  transform: scale(1.5);
+}
+
+footer .socials a:active {
+  transform: scale(1);
 }
 
 footer .copyright {
@@ -285,4 +318,9 @@ footer .copyright {
 
 footer a:hover {
   color: var(--accent);
+  transform: scale(1.2);
+}
+
+footer a:active {
+  transform: scale(1);
 }
